@@ -1,4 +1,4 @@
-package Entity.Creature;
+package Entity;
 import java.awt.Graphics;
 
 import Game.Game;

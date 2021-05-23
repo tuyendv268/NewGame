@@ -2,16 +2,17 @@ package Entity.Creature;
 import java.awt.Rectangle;
 
 import API.Animation;
+import Entity.Entity;
 import Game.Game;
 import Game.GameStart;
 public abstract class Creature extends Entity{
-    public static final int MAXHP = 100;
-    protected int HP;
+    protected int MAXHP;
+	protected int HP;
     protected float Speed;
     protected float deltaX,deltaY;
     protected Rectangle bounds;
     protected boolean allowAttack,dead;
-//    protected Attack attack;
+    protected Attack attack;
     protected Animation creature_up,creature_down,creature_left,creature_right;
 
 
@@ -105,6 +106,13 @@ public abstract class Creature extends Entity{
 	}
     public void die() {
 
+	}
+	public int getMAXHP() {
+		return MAXHP;
+	}
+
+	public void setMAXHP(int mAXHP) {
+		MAXHP = mAXHP;
 	}
 
 	protected boolean collisionWithTile(int x, int y) {
