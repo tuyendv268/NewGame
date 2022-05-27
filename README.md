@@ -1,2 +1,2 @@
 # RPG game
-java(awt, swing)
+java (awt, swing)
